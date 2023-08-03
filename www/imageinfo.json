@@ -1,0 +1,16 @@
+{
+    "images": [
+        {
+            "name": "Gold",
+            "filename": "2gtq.png",
+            "price": "99.99",
+            "description": "Shiny Gold"
+        },
+        {
+            "name": "Silver",
+            "filename": "7v39.png",
+            "price": "50.00",
+            "description": "Shiny Silver"
+        }
+    ]
+}

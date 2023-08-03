@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Image Uploader</title>
+</head>
+<body>
+    <!-- Based off of: https://codepen.io/chriiss/pen/qBJjLEx-->
+    <nav class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            Image Uploader
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="uploader.html">Uploader</a></li>
+          <li><a href="viewer.html">Viewer</a></li>
+        </ul>
+    </nav>
+
+    <header class="upload">
+        <form method="post" action="/" enctype="multipart/form-data">
+            <label for="file-choose" class="file-choose">
+                Choose File
+            </label>
+            <input id="file-choose" type="file" name="file"/><br>
+
+            <input name="nameinput" class="info" type="text" placeholder="Name"/><br>
+            <input name="priceinput" class="info" pattern="^\d*(\.\d{0,2})?$" placeholder="Price"/><br>
+            <textarea name="descriptioninput" class="info" placeholder="Enter description..."></textarea>
+
+            <input class="file-upload" type="submit" value="Upload"/>
+        </form>
+    </header>
+
+
+</body>
+</html>

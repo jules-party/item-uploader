@@ -59,6 +59,11 @@ function description() {
     }
 }
 
+function client_statusText() {
+    var statusText = document.getElementById("statustext");
+    statusText.textContent = "Selected: " + statusText.files[0].name;
+}
+
 async function execute() {
     try {
         const result = await view();

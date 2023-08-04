@@ -6,6 +6,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Image Uploader</title>
 </head>
+<script>
+  function client_statusText() {
+    var statusText = document.getElementById("statustext");
+    statusText.textContent = "File Chosen!";
+  }
+</script>
+
 <body>
     <!-- Based off of: https://codepen.io/chriiss/pen/qBJjLEx-->
     <nav class="nav">
@@ -24,18 +31,19 @@
         </div>
         
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="uploader.html">Uploader</a></li>
-          <li><a href="viewer.html">Viewer</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/uploader">Uploader</a></li>
+          <li><a href="/viewer">Viewer</a></li>
         </ul>
     </nav>
 
     <header class="upload">
-        <form method="post" action="/" enctype="multipart/form-data">
+        <form method="post" action="/uploader" enctype="multipart/form-data">
+            <center><h3 id="statustext">Upload a image!</h3></center>
             <label for="file-choose" class="file-choose">
                 Choose File
             </label>
-            <input id="file-choose" type="file" name="file"/><br>
+            <input onchange="client_statusText()" id="file-choose" type="file" name="file"/><br>
 
             <input name="nameinput" class="info" type="text" placeholder="Name"/><br>
             <input name="priceinput" class="info" pattern="^\d*(\.\d{0,2})?$" placeholder="Price"/><br>
@@ -44,7 +52,5 @@
             <input class="file-upload" type="submit" value="Upload"/>
         </form>
     </header>
-
-
 </body>
 </html>
